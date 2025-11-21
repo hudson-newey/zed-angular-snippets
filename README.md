@@ -10,12 +10,6 @@ This extension for Visual Studio Code adds snippets for Angular for TypeScript a
 
 See the [CHANGELOG](CHANGELOG.md) for the latest changes
 
-### Command Palette Commands
-
-| Command                                              | Purpose                     |
-| ---------------------------------------------------- | --------------------------- |
-| express: Add simple Express server file to workspace | Adds Node.js express server |
-
 ### TypeScript Angular Snippets
 
 | Snippet                      | Purpose                                                              |
@@ -72,19 +66,7 @@ See the [CHANGELOG](CHANGELOG.md) for the latest changes
 | `a-ngrx-data-entity-metadata`                | create the entity metadata for NgRx                       |
 | `a-ngrx-data-entity-collection-data-service` | create a data service using NgRx                          |
 
-### Dockerfile Snippets
-
-| Snippet                           | Purpose                                      |
-| --------------------------------- | -------------------------------------------- |
-| `docker-angular-node-multi-stage` | Multi-stage Dockerfile for Node with Angular |
-
-### JavaScript Snippets
-
-| Snippet            | Purpose                |
-| ------------------ | ---------------------- |
-| `ex-simple-server` | Node.js Express Server |
-
-### HTML Snippets
+### Angular Snippets
 
 | Snippet              | Purpose                                             |
 | -------------------- | --------------------------------------------------- |
