@@ -127,12 +127,12 @@
     "prefix": "a-service-httpclient",
     "description": "Angular service with HttpClient",
     "body": [
-      "import { Injectable } from '@angular/core';",
+      "import { Injectable, inject } from '@angular/core';",
       "import { HttpClient } from '@angular/common/http';",
       "",
       "@Injectable({providedIn: ${1:'root'}})",
       "export class ${2:ServiceName}Service {",
-      "\tconstructor(private httpClient: HttpClient) { }",
+      "\tprivate readonly httpClient = inject(HttpClient);",
       "\t$0",
       "}"
     ]
@@ -435,7 +435,7 @@
     "prefix": "a-ctor-skip-self",
     "description": "Angular Module SkipSelf constructor",
     "body": [
-      "constructor( @Optional() @SkipSelf() parentModule: ${1:ModuleName} {",
+      "constructor(@Optional() @SkipSelf() parentModule: ${1:ModuleName} {",
       "\tif (parentModule) {",
       "\t\tconst msg = `${1:ModuleName} has already been loaded. ",
       "\t\t\tImport ${1:ModuleName} once, only, in the root AppModule.`;",
