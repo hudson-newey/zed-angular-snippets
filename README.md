@@ -95,6 +95,14 @@ See the [CHANGELOG](CHANGELOG.md) for the latest changes
 | `a-ng-container`     | `<ng-container>` element                            |
 | `a-ng-content`       | `<ng-content>` element                              |
 
+## Installation
+
+1. Launch Zed
+2. Go to the "extensions" panel `Ctrl + Shift + X` (Windows/Linux) or `Cmd + Shift + X` (Mac)
+3. Click "Install dev extension"
+4. Locate the root of this repository, and select it
+5. Reload Zed
+
 ## Credits
 
 Thanks to the following contributors for the NgRx snippets:

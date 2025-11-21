@@ -5,3 +5,4 @@ schema_version = 1
 authors = ["hudson-newey", "johnpapa"]
 description = "Angular snippets for Zed (fork of johnpapa/vscode-angular-snippets)"
 repository = "https://github.com/hudson-newey/zed-angular-snippets"
+snippets = ["./snippets/angular.json", "./snippets/typescript.json"]
