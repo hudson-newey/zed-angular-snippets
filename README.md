@@ -2,7 +2,7 @@
 
 Big thank you for johnpapa for his development and maintenance of the [vscode-angular-snippets](https://github.com/johnpapa/vscode-angular-snippets) which this extension is based on.
 
-**Updated for Angular 20 release**
+**Updated for Angular 21 release**
 
 This extension for Zed adds snippets for Angular TypeScript.
 
