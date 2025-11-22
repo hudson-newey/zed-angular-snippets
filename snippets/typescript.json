@@ -49,7 +49,7 @@
     "body": [
       "import { Injectable } from '@angular/core';",
       "",
-      "@Injectable({providedIn: ${1:'root'}})",
+      "@Injectable({ providedIn: ${1:'root'} })",
       "export class ${2:ServiceName}Service {",
       "\t$0",
       "}"
@@ -115,7 +115,7 @@
       "import { Injectable, inject } from '@angular/core';",
       "import { HttpClient } from '@angular/common/http';",
       "",
-      "@Injectable({providedIn: ${1:'root'}})",
+      "@Injectable({ providedIn: ${1:'root'} })",
       "export class ${2:ServiceName}Service {",
       "\tprivate readonly httpClient = inject(HttpClient);",
       "\t$0",
@@ -153,7 +153,7 @@
       "export function headerInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {",
      	"\tconst headers = req.headers.set('Content-Type', 'application/json');",
      	"\tconst authReq = req.clone({ headers });",
-     	"\treturn next.handle(authReq);",
+     	"\treturn next(authReq);",
       "}"
     ]
   },
@@ -165,7 +165,7 @@
       "import { Observable } from 'rxjs';",
       "",
       "export function yourInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {",
-      "\treturn next.handle(req);",
+      "\treturn next(req);",
       "}"
     ]
   },
@@ -194,12 +194,12 @@
     "description": "Angular App root component",
     "body": [
       "import { Component } from '@angular/core';",
+      "import { RouterOutlet } from '@angular/router';",
       "",
       "@Component({",
       "\tselector: '${1:prefix-app}',",
-      "\ttemplate: `",
-      "\t\t<router-outlet></router-outlet>",
-      "\t\t`",
+      "\ttemplate: `<router-outlet></router-outlet>`,",
+      "\timports: [RouterOutket],",
       "})",
       "export class ${2:App}Component { }",
       "$0"
@@ -269,7 +269,6 @@
     "prefix": "a-guard-can-activate",
     "description": "Angular Functional CanActivate guard",
     "body": [
-      "import { inject } from '@angular/core';",
       "import {",
       "  ActivatedRouteSnapshot,",
       "  CanActivateFn,",
@@ -281,8 +280,6 @@
       "\troute: ActivatedRouteSnapshot,",
       "\tstate: RouterStateSnapshot",
       ") => {",
-      "\tconst router = inject(Router);",
-      "",
       "\treturn true;$0",
       "};"
     ]
@@ -291,7 +288,6 @@
     "prefix": "a-guard-can-activate-child",
     "description": "Angular CanActivateChild guard",
     "body": [
-      "import { inject } from '@angular/core';",
       "import {",
       "  ActivatedRouteSnapshot,",
       "  CanActivateChildFn,",
@@ -310,7 +306,6 @@
     "prefix": "a-guard-can-match",
     "description": "Angular Functional CanMatchFn guard",
     "body": [
-      "import { inject } from '@angular/core';",
       "import { CanMatchFn, Route, Router, UrlSegment } from '@angular/router';",
       "",
       "export const ${2:Name}Guard: CanMatchFn = (",
@@ -325,7 +320,6 @@
     "prefix": "a-guard-can-deactivate",
     "description": "Angular Functional CanDeactivateFn guard",
     "body": [
-      "import { inject } from '@angular/core';",
       "import { CanDeactivateFn } from '@angular/router';",
       "import { Observable } from 'rxjs';",
       "",
