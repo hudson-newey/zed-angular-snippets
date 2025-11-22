@@ -1,9 +1,9 @@
-id = "zed-angular-snippets"
-name = "Zed Angular Snippets"
+id = "angular-snippets"
+name = "Angular TypeScript Snippets"
 version = "21.0.0"
 schema_version = 1
 authors = ["hudson-newey", "johnpapa"]
-description = "Angular snippets for Zed (fork of johnpapa/vscode-angular-snippets)"
-repository = "https://github.com/hudson-newey/zed-angular-snippets"
+description = "Angular 20 TypeScript snippets for the Zed IDE"
+repository = "https://github.com/hudson-newey/angular-snippets-for-zed"
 # snippets = ["./snippets/angular.json", "./snippets/typescript.json"] # this doesn't work, although I'd like it to...
 snippets = "./snippets/typescript.json"
